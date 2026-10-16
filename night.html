@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#102f3b"><title>月夜渡河 · Leisure</title><link rel="stylesheet" href="night.css?v=1"></head>
+<body>
+<header><a href="./">◈ LEISURE</a><a class="back" href="index.html?v=2">咖啡馆关卡 ↗</a></header>
+<main>
+  <div class="heading"><span class="eyebrow">第二关 · 动手推理</span><h1>月夜渡河</h1><p>六位小旅客，一条河。你能把它们全送到右岸吗？</p></div>
+  <div class="rules" aria-label="游戏规则"><div><span class="rule-icons">⛵ <b>≤ 2</b></span><span>每船 1～2 只</span></div><div><span class="rule-icons">🐰 <b>≥</b> 🦊</span><span>有兔子的岸，兔子不能更少</span></div><div><span class="rule-icons">🦊 🦊 <b>✓</b></span><span>只有狐狸的岸是安全的</span></div></div>
+  <section class="game" aria-label="渡河场景">
+    <div class="game-top"><span id="moves">第 0 次渡河</span><span id="best">最少需要 11 次</span></div>
+    <div class="landscape">
+      <div class="moon" aria-hidden="true"></div><div class="stars" aria-hidden="true">✦ · ✧ · ✦</div>
+      <div class="banks"><section class="bank" aria-labelledby="left-title"><h2 id="left-title">出发地 <span>左岸</span></h2><div id="left-animals" class="animals"></div><div id="left-count" class="bank-count"></div></section><div class="water" aria-hidden="true"><span>﹏</span><span>﹏</span><span>﹏</span></div><section class="bank destination" aria-labelledby="right-title"><h2 id="right-title">目的地 <span>右岸</span></h2><div id="right-animals" class="animals"></div><div id="right-count" class="bank-count"></div></section></div>
+      <div class="dock"><div id="boat-wrap" class="boat-wrap"><div id="passengers" class="passengers"></div><div class="hull" aria-hidden="true"></div><div id="boat-label">小船停在左岸</div></div></div>
+    </div>
+    <p class="instruction" id="instruction">① 点左岸动物上船　② 点「驶向右岸」</p>
+    <div class="controls"><button id="undo" class="secondary" disabled aria-label="撤销上一次渡河">↶ 撤销</button><button id="sail" class="primary">驶向右岸 →</button><button id="reset" class="secondary">↺ 重来</button></div>
+    <div id="message" role="status" aria-live="polite"></div>
+    <div class="bottom-controls"><button id="hint">✧ 卡住了？看一步提示</button><span id="save-status">自动保存</span></div>
+    <div id="hint-panel" hidden></div>
+    <div id="victory" hidden><div class="victory-icon">✦</div><h2>全员抵达！</h2><p id="victory-text"></p><button id="again" class="primary">再挑战一次</button><a href="index.html?v=2">回咖啡馆喝一杯 ↗</a></div>
+  </section>
+  <details><summary>怎么玩？</summary><p>点与船同岸的动物上船，点船上的动物可下船。船不能空驶。点击出发时会检查渡河后的两岸：只要岸上有兔子，狐狸就不能比兔子多。不安全的走法会被拦下，不会丢失进度。把三只兔子、三只狐狸都送到右岸就获胜。</p></details>
+</main>
+<footer>LEISURE · 月色正好，慢慢想。</footer><script src="night.js?v=1"></script>
+</body></html>
